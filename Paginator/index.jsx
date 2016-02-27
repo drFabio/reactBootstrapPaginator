@@ -6,7 +6,8 @@ export const Paginator = React.createClass({
           max: 10,
           current: 1
         }
-    },
+    }, 
+
     render(){
         let current = this.props.current;
         let total = this.props.total;
@@ -22,8 +23,8 @@ export const Paginator = React.createClass({
             );
             previous = (
                 <li>
-                  <a href="#" aria-label="Previous">
-                    <span className="glyphicon glyphicon-chevron-left" aria-hidden="true" onClick="{this.onPage(start-1)}"></span>
+                  <a href="javascript:void(0)" >
+                    <span className="glyphicon glyphicon-chevron-left" onClick={(e)=>this.props.onPage(start-1)}></span>
                   </a>
                 </li>
             );
@@ -36,8 +37,8 @@ export const Paginator = React.createClass({
             );
             next = (
                 <li>
-                    <a href="#" aria-label="Next">
-                        <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <a href="javascript:void(0)" >
+                        <span className="glyphicon glyphicon-chevron-right" onClick={(e)=>this.props.onPage(start+1)}></span>
                     </a>
                 </li>
             );
@@ -46,7 +47,7 @@ export const Paginator = React.createClass({
             const links = [];
             for(let i=start;i<=end;i++){
                 let className = i==current?'active':'';
-                links.push(<li key={i} className={className}><a href="#" onClick="{this.onPage(i)}">{i}</a></li>);
+                links.push(<li key={i} className={className}><a href="javascript:void(0)" onClick={(e)=>this.props.onPage(i)}>{i}</a></li>);
             }
             return links;
         };

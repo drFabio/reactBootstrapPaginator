@@ -1,0 +1,28 @@
+{
+  "name": "react_bootstrap_paginator",
+  "version": "0.0.1",
+  "description": "A contextual paginator on top of react and bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pre:babel":"babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports",
+    "pre:bundle":"browserify ./lib/Paginator.js -o ./build/react-paginator.js --transform browserify-global-shim --standalone ReactPaginator ",
+    "pre:uglify":"uglifyjs ./build/react-paginator.js --compress --mangle --output ./build/react-paginator.min.js --source-map ./build/react-paginator.min.js.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drFabio/reactBootstrapPaginator.git"
+  },
+  "keywords": [
+    "react",
+    "bootstrap",
+    "paginator"
+  ],
+  "author": "Fabio Oliveira Costa <blackjackdevel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/drFabio/reactBootstrapPaginator/issues"
+  },
+  "homepage": "https://github.com/drFabio/reactBootstrapPaginator#readme",
+  "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify"
+}

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify",
-    "pre:babel": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports",
+    "pre:babel": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports --copy-files",
     "pre:bundle": "browserify -t browserify-css ./lib/Paginator.js -o ./build/react-paginator.js ",
     "pre:uglify": "uglifyjs ./build/react-paginator.js --compress --mangle --output ./build/react-paginator.min.js --source-map ./build/react-paginator.min.js.map"
   },
@@ -42,5 +42,10 @@
   },
   "browserify-global-shim": {
     "react": "React"
+  },
+  "browserify-css": {
+    "autoInject": true,
+    "minify": true,
+    "rootDir": "."
   }
 }

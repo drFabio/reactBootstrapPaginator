@@ -122,7 +122,7 @@ var Paginator = exports.Paginator = _react2.default.createClass({
 require('./paginator.css');
 
 },{"./paginator.css":2,"react":160}],2:[function(require,module,exports){
-var css = ".pagination li a .glyphicon {\n  line-height: inherit;\n}\n"; (require("browserify-css").createStyle(css, { "href": "lib/paginator.css"})); module.exports = css;
+var css = ".pagination li a .glyphicon{line-height:inherit}"; (require("browserify-css").createStyle(css, { "href": "lib/paginator.css"})); module.exports = css;
 },{"browserify-css":3}],3:[function(require,module,exports){
 'use strict';
 // For more information about browser field, check out the browser field at https://github.com/substack/browserify-handbook#browser-field.

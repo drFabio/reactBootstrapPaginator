@@ -21,7 +21,37 @@ And if you are on the last page it will look like this:
 ![end](https://cloud.githubusercontent.com/assets/2636143/13376101/9acc64c0-dd90-11e5-9655-a30c765d8d6c.png)
 
 **Notice no right arrow and no right dots**
+## Usage ES5 standalone
+```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Reacomponents - Paginator ES5</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+      <div id="the_paginator"></div>
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+      <script src="../../build/react-paginator.min.js"></script>
+      <script>
+        var Paginator = React.createFactory(ReactPaginator);
 
+        window.onload = function () {
+          var PaginatorComp = Paginator({
+            current: 10,
+            total: 1000
+          });
+          var container = document.getElementById('the_paginator');
+          var l = ReactDOM.render(PaginatorComp, container);
+        };
+      </script>
+    </body>
+    </html>
+```
 
 ## Usage ES6
 

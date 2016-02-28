@@ -68,4 +68,4 @@ export const Paginator = React.createClass({
         )
     }
 })
-require('./paginator.scss');
+require('./paginator.css');

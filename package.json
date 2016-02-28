@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre:babel":"babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports",
-    "pre:bundle":"browserify ./lib/Paginator.js -o ./build/react-paginator.js --transform browserify-global-shim --standalone ReactPaginator ",
-    "pre:uglify":"uglifyjs ./build/react-paginator.js --compress --mangle --output ./build/react-paginator.min.js --source-map ./build/react-paginator.min.js.map"
+    "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify",
+    "pre:babel": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports",
+    "pre:bundle": "browserify -t browserify-css ./lib/Paginator.js -o ./build/react-paginator.js ",
+    "pre:uglify": "uglifyjs ./build/react-paginator.js --compress --mangle --output ./build/react-paginator.min.js --source-map ./build/react-paginator.min.js.map"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,22 @@
     "url": "https://github.com/drFabio/reactBootstrapPaginator/issues"
   },
   "homepage": "https://github.com/drFabio/reactBootstrapPaginator#readme",
-  "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify"
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.2",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "browserify": "^13.0.0",
+    "browserify-css": "^0.9.0",
+    "browserify-global-shim": "^1.0.3",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {
+    "react": "^0.14.7"
+  },
+  "browserify-global-shim": {
+    "react": "React"
+  }
 }

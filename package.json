@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify",
     "pre:babel": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports --copy-files",
-    "pre:bundle": "browserify -t browserify-css ./lib/Paginator.js -o ./build/react-paginator.js ",
+    "pre:bundle": "browserify -t browserify-css -t browserify-global-shim ./lib/Paginator.js -o ./build/react-paginator.js --standalone ReactPaginator",
     "pre:uglify": "uglifyjs ./build/react-paginator.js --compress --mangle --output ./build/react-paginator.min.js --source-map ./build/react-paginator.min.js.map"
   },
   "repository": {
@@ -19,7 +19,10 @@
     "bootstrap",
     "paginator"
   ],
-  "author": "Fabio Oliveira Costa <blackjackdevel@gmail.com>",
+  "author": {
+    "name":"Fabio Oliveira Costa",
+    "email":"<blackjackdevel@gmail.com>"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/drFabio/reactBootstrapPaginator/issues"

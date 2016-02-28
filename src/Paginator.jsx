@@ -1,6 +1,8 @@
+'use strict';
+
 import React from 'react';
 
-export const Paginator = React.createClass({
+const Paginator = React.createClass({
     getDefaultProps(){
         return {
           max: 10,
@@ -69,3 +71,4 @@ export const Paginator = React.createClass({
     }
 })
 require('./paginator.css');
+export  default Paginator;

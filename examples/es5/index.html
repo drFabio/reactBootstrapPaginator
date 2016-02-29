@@ -18,7 +18,10 @@
     window.onload = function () {
       var PaginatorComp = Paginator({
         current: 10,
-        total: 1000
+        total: 1000,
+        onPage:function(page){
+          console.log("I should do something regarding page "+page);
+        }
       });
       var container = document.getElementById('the_paginator');
       var l = ReactDOM.render(PaginatorComp, container);

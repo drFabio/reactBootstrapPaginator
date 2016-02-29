@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "example:es6": "PORT=8080 webpack-dev-server  --history-api-fallback",
+    "example:es6:build":"webpack",
     "prepublish": "npm run pre:babel && npm run pre:bundle && npm run pre:uglify",
     "pre:babel": "babel ./src --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports --copy-files",
     "pre:bundle": "browserify -t browserify-css -t browserify-global-shim ./lib/Paginator.js -o ./build/react-paginator.js --standalone ReactPaginator",
@@ -20,8 +22,8 @@
     "paginator"
   ],
   "author": {
-    "name":"Fabio Oliveira Costa",
-    "email":"<blackjackdevel@gmail.com>"
+    "name": "Fabio Oliveira Costa",
+    "email": "<blackjackdevel@gmail.com>"
   },
   "license": "MIT",
   "bugs": {
@@ -35,10 +37,19 @@
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-es2015": "^6.5.0",
     "babel-preset-react": "^6.5.0",
+    "babelify": "^7.2.0",
     "browserify": "^13.0.0",
     "browserify-css": "^0.9.0",
     "browserify-global-shim": "^1.0.3",
-    "uglify-js": "^2.6.2"
+    "uglify-js": "^2.6.2",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "html-webpack-plugin": "^2.8.1",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.7.3",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0"
   },
   "dependencies": {
     "react": "^0.14.7"

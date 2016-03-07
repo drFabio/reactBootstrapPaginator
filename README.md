@@ -1,6 +1,9 @@
 # reactBootstrapPaginator
 A contextual paginator on top of react and bootstrap
-
+## Installation
+```shell
+  npm install react_bootstrap_paginator
+```
 ## What do you mean with contextual paginator?
 
 I mean that it's presentation will change according to the context.

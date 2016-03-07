@@ -11,7 +11,7 @@ I mean that it's presentation will change according to the context.
 If you have the pages 1-10  , are on the first one and want to show 10 pages it will look like this:
 ![1_to_10](https://cloud.githubusercontent.com/assets/2636143/13376102/9acd464c-dd90-11e5-9e18-2035c6a12b95.png)
 
-**Notice no left arrow or dots indicating more**
+**Notice no arrow or dots indicating more**
 
 On 1-50 and you are on page 30 it would look like this:
 

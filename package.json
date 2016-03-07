@@ -1,8 +1,8 @@
 {
   "name": "react_bootstrap_paginator",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A contextual paginator on top of react and bootstrap",
-  "main": "index.js",
+  "main": "lib/Paginator.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "example:es6": "PORT=8080 webpack-dev-server  --history-api-fallback",

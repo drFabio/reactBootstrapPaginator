@@ -25,6 +25,7 @@ And if you are on the last page it will look like this:
 
 **Notice no right arrow and no right dots**
 ## Usage ES5 standalone
+I have a codepen example [here](http://codepen.io/drFabio/pen/yOemVV)
 ```html
     <!DOCTYPE html>
     <html lang="en">

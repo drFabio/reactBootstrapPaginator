@@ -51,7 +51,7 @@ var Paginator = _react2.default.createClass({
                     'a',
                     { href: 'javascript:void(0)' },
                     _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-left', onClick: function onClick(e) {
-                            return _this.props.onPage(start - 1);
+                            return _this.props.onPage(current - 1);
                         } })
                 )
             );
@@ -75,7 +75,7 @@ var Paginator = _react2.default.createClass({
                     'a',
                     { href: 'javascript:void(0)' },
                     _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right', onClick: function onClick(e) {
-                            return _this.props.onPage(start + 1);
+                            return _this.props.onPage(current + 1);
                         } })
                 )
             );

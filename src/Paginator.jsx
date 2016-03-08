@@ -30,7 +30,7 @@ const Paginator = React.createClass({
             previous = (
                 <li>
                   <a href="javascript:void(0)" >
-                    <span className="glyphicon glyphicon-chevron-left" onClick={(e)=>this.props.onPage(start-1)}></span>
+                    <span className="glyphicon glyphicon-chevron-left" onClick={(e)=>this.props.onPage(current-1)}></span>
                   </a>
                 </li>
             );
@@ -44,7 +44,7 @@ const Paginator = React.createClass({
             next = (
                 <li>
                     <a href="javascript:void(0)" >
-                        <span className="glyphicon glyphicon-chevron-right" onClick={(e)=>this.props.onPage(start+1)}></span>
+                        <span className="glyphicon glyphicon-chevron-right" onClick={(e)=>this.props.onPage(current+1)}></span>
                     </a>
                 </li>
             );

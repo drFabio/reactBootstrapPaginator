@@ -17,7 +17,7 @@ const Paginator = React.createClass({
 
         let start = Math.max(current - Math.round(max/2) ,1);
 
-        let end = Math.min(start+max,total);
+        let end = Math.min((start+max)-1,total);
         if(end - start < max) {
             start = Math.max(1,end - max);
         }
